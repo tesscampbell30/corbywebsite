@@ -1,0 +1,647 @@
+body {
+  background: #F2F2EF;
+}
+
+.container{
+  display: grid;
+  grid-template-rows: [martop] 40px [logotop] 20px [navbar] 60px [logobot] 20px [cont] auto [cont1] auto [cont2] auto [cont3] auto [foot] 60px;
+  grid-template-columns: [col1] 10% [col2] 1fr [col2h] 1fr [col3] 1fr [col3h] 1fr [col4] 1fr [col4q] 1fr [col4h] 1fr [col4qq] 1fr [col5] 10%;
+  
+  grid-gap: 0px;
+}
+
+
+.leftnav {
+  grid-column-start: col1;
+  grid-column-end: col2;
+  grid-row: navbar;
+  background-color: #353E59;  
+  
+}
+
+.rightnav {
+  grid-column-start: col5;
+  grid-row: navbar;
+  background-color: #353E59;    
+}
+
+.logo {
+  grid-column-start: col2;
+  grid-column-end: col3;
+  grid-row-start: logotop;
+  grid-row-end: cont; 
+
+  text-align: center;
+  color: black;
+  padding: 0px 10px;
+  background-color: #F2F2EF;
+  border-style: none solid;
+  border-color: #9F1B1F;
+  border-width: 12px;
+   
+  font-family: 'Fredericka the Great';
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+
+.navmain{
+  grid-column-start: col3;
+  grid-column-end: col5;
+  grid-row: navbar;
+  background-color: #353E59;  
+  font-family: 'Cabin';
+  font-weight: normal;
+  font-size: 20px;
+  color: #F2F2EF;
+}
+
+.navmain ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navmain ul a {
+  
+  color: #F2F2EF;
+  text-align: center;
+  text-decoration: none;
+  
+}
+
+.active {
+  padding: 0px  10px;
+  border-style: none solid;
+  border-color: #F2F2EF;
+  border-width: 2px;
+}
+
+.logosmall {
+  display: none;
+}
+
+.logosmall a {
+  text-decoration: none;
+  color: black;
+}
+
+.navlist {
+  display: none;
+}
+
+/* Change the color of links on hover */
+.navmain a:hover {
+    
+    color: black;
+}
+
+.intro {
+  grid-column-start: col2;
+  grid-column-end: col4;
+  grid-row-start: cont;
+  grid-row-end: foot;
+  justify-self: right;
+  align-self: center;
+  max-width: 90%;
+}
+
+.intro h2 {
+  font-family: 'Cabin';
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;  
+}
+
+.intro p {
+  font-family: 'Cabin';
+  font-size: 18px;
+  font-weight: normal;
+
+  padding: 20px;
+  background-color: #F2F2EF;
+  border-style: solid none;
+  border-color: #9F1B1F;
+  border-width: 4px;
+}
+
+.intro ul {
+list-style-type: none;
+text-align: center;
+font-family: 'Cabin';
+font-size: 20px;
+font-weight: normal;
+}
+
+.intro ul a {
+  text-decoration: none;
+  color: #353E59;
+}
+
+.intro ul a:hover {
+  color: #9F1B1F;
+}
+.introimg {
+  
+  grid-column-start: col4;
+  grid-column-end: col5;
+  grid-row-start: logobot;
+  grid-row-end: foot;
+}
+
+.introimg img {
+  max-width: 75%;
+  max-height: auto;
+  display: block;
+  justify-self: center;
+}
+
+
+.footer {
+  grid-row: foot;
+  grid-column: col1 / -1;
+  background-color: #353E59;  
+}
+
+/* Speaking */
+
+.speakintro {
+  grid-row-start: logobot;
+  grid-row-end: cont1;
+  grid-column: col3/ col4h;
+  text-align: center;
+  font-family: Cabin;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 40px 0px 30px 0px;
+
+}
+
+
+.stripe {
+  grid-row: cont1 / cont3;
+  background-color: #D8DCD1;
+  grid-column: col1/-1;
+    border-style: solid none;
+  border-color: #D8DCD1;
+  border-width: 4px;
+}
+
+.left-stripe-text{
+  grid-row: cont1; 
+  grid-column: col3h / col4q;
+   font-family: Cabin;
+  font-size: 14px;
+  font-weight: normal;
+  
+}
+
+.right-stripe-text{
+  grid-row: cont2; 
+  grid-column: col3h / col4q;
+  text-align: right;
+   font-family: Cabin;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: Cabin;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  }
+
+.right-stripe-text h3 {
+  text-align: right;
+  margin-top: 0px;
+}
+
+.left-stripe-text h3 {
+  text-align: left;
+  margin-top: 40px;
+}
+
+.right-stripe-text ul{
+  list-style-type: none;
+  margin-top: 0px;
+}
+
+.left-stripe-text ul{
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 0px;
+}
+
+.red-dot{
+  grid-column: col2h/col3h;
+  grid-row: cont1/cont3;
+}
+
+.red-dot img{
+  max-width: 90%;
+  margin-left: 5%;
+  margin-top: 4px;
+}
+
+.awesome{
+  grid-column: col4q/col4qq;
+  grid-row: cont1/cont3;
+}
+
+.awesome img{
+  max-width: 90%;
+  margin-left: 5%;
+  margin-top: 23.5%;
+ 
+}
+
+.speakinfo {
+  grid-row: cont3;
+  grid-column: col2/col5;
+}
+
+.speakinfo p {
+  text-align: center;
+  font-family: Cabin;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 2em 0px;
+}
+
+.speakinfo img {
+  max-width: 30%;
+  margin-left: 35%;
+  margin-top: 2em;
+}
+
+.speakinfo h3 {
+  text-align: center;
+}
+
+
+@media screen and (max-width: 1380px) {
+
+.logo {
+  display: none;
+}
+
+
+.logosmall {
+  display: flex;
+  grid-column-start: col2;
+  grid-column-end: col5;
+  grid-row-start: martop;
+  grid-row-end: navbar; 
+
+  justify-self: center;
+  color: black;
+  padding: 10px 10px;
+  background-color: #F2F2EF;
+  border-style: none solid;
+  border-color: #9F1B1F;
+  border-width: 12px;
+   
+  font-family: 'Fredericka the Great';
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;  
+}
+
+.navmain{
+  grid-column-start: col2;
+  grid-column-end: col5;
+  grid-row: navbar;
+}
+
+.navmain ul{
+  padding: 0px;
+}
+
+.intro{
+  max-width: 100%;
+}
+
+.intro h2 {
+  font-size: 20px;
+}
+
+.intro p{
+  font-size: 16px;
+}
+
+.intro ul {
+  font-size: 18px;
+  }
+
+.introimg {
+  align-self: center;
+}
+
+.introimg img {
+  max-width: 100%;
+}
+
+/* Speaking */
+
+.speakintro {
+  grid-row-start: logobot;
+  grid-row-end: cont1;
+  grid-column: col2/ col5;
+  text-align: center;
+  
+}
+
+
+.left-stripe-text{
+  grid-row: cont1; 
+  grid-column: col3 / col4h;  
+}
+
+.right-stripe-text{
+  grid-row: cont2; 
+  grid-column: col3 / col4h;
+}
+
+
+
+.red-dot{
+  grid-column: col2/col3;
+  grid-row: cont1/cont3;
+}
+
+
+
+.awesome{
+  grid-column: col4h/col5;
+  grid-row: cont1/cont3;
+}
+
+
+
+.speakinfo {
+  grid-row: cont3;
+  grid-column: col2/col5;
+}
+
+
+
+.speakinfo img {
+  max-width: 30%;
+  margin-left: 35%;
+  margin-top: 2em;
+}
+
+@media screen and (max-width: 1060px) {
+
+  /* Speaking */
+  .speakintro {
+  
+  grid-column: col2/ col5;
+  text-align: center;
+  
+  font-size: 16px;
+  font-weight: normal;
+  margin: 20px 0px 15px 0px;
+
+}
+
+.red-dot{
+  grid-column: col2/col4; 
+  grid-row: cont1; 
+}
+
+.red-dot img{
+  max-width: 80%;
+  margin-left: 10%;
+  margin-top: 4px;
+}
+
+.left-stripe-text{
+  
+  grid-column: col4 / -1;
+   font-family: Cabin;
+  font-size: 14px;
+  font-weight: normal;
+  
+}
+
+.awesome{
+  grid-column: col4/ col5;
+  grid-row: cont2;
+}
+
+.awesome img{
+  max-width: 90%;
+  margin-left: 0%;
+  margin-top: 0px;
+ 
+}
+
+.right-stripe-text{
+  grid-row: cont2; 
+  grid-column: col2 / col4;
+  align-self: end;
+  margin-right: 10%;
+  margin-bottom: 20px;
+}
+
+
+.speakinfo img {
+  max-width: 50%;
+  margin-left: 25%;
+  margin-top: 2em;
+}
+
+
+
+
+
+@media screen and (max-width: 660px) {
+
+.logo {
+  display: none;
+}
+
+
+.logosmall {
+  display: flex;
+  grid-column-start: col2;
+  grid-column-end: col5;
+  grid-row-start: martop;
+  grid-row-end: navbar; 
+
+  justify-self: center;
+  align-self: center;
+  color: black;
+  padding: 10px 10px;
+  background-color: #F2F2EF;
+  border-style: none solid;
+  border-color: #9F1B1F;
+  border-width: 6px;
+  text-align: center; 
+  font-family: 'Fredericka the Great';
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: uppercase;  
+}
+
+.rightnav {
+  display: none;
+}
+
+.navmain{
+  display: none;
+}
+
+.navlist{
+  display: block;
+  
+  grid-column: col1 / -1;
+  grid-row: navbar;
+  
+
+  background-color: #353E59;  
+  font-family: 'Cabin';
+  font-weight: normal;
+  font-size: 16px;
+  color: #F2F2EF;
+
+  
+}
+
+.navlist ul{
+  list-style-type: none; 
+  padding: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.navlist ul a {
+  
+  color: #F2F2EF;
+  text-align: center;
+  text-decoration: none;  
+}
+
+
+/* Change the color of links on hover */
+.navlist a:hover {
+    
+    color: black;
+}
+
+.intro{
+  max-width: 80%;
+  grid-column: col1 / -1;
+  grid-row: cont1/foot;
+  justify-self: center;
+}
+
+.intro h2 {
+  font-size: 20px;
+}
+
+.intro p{
+  font-size: 16px;
+  
+}
+
+.intro ul {
+  font-size: 18px;
+  }
+
+.introimg {
+  grid-column: col1 / -1;
+  grid-row: cont;
+
+
+
+}
+
+.introimg img {
+  max-width: 60%;
+  margin-left: 20%;
+  
+}
+
+  /* Speaking */
+
+
+.red-dot{
+  grid-column: col1/col3h; 
+  grid-row: cont1; 
+}
+
+.red-dot img{
+  max-width: 80%;
+  margin-left: 10%;
+  margin-top: 4px;
+}
+
+.left-stripe-text{
+  
+  grid-column: col3h/ -1;
+   font-family: Cabin;
+  font-size: 14px;
+  font-weight: normal;  
+}
+
+.left-stripe-text h3 {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.awesome{
+  grid-column: col4q/ -1;
+  grid-row: cont2;
+}
+
+.awesome img{
+  max-width: 90%;
+  margin-left: 0%;
+  margin-top: 20px;
+ 
+}
+
+.right-stripe-text{
+  grid-row: cont2; 
+  grid-column: col1 / col4q;
+  align-self: end;
+  padding-left: 0px;
+  margin-right: 10%;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.right-stripe-text ul {
+  padding-left: 5px;
+}
+
+.speakinfo {
+  grid-row: cont3;
+  grid-column: col1/-1;
+  padding: 20px 0px;
+}
+
+.speakinfo p {
+  text-align: left;
+  padding: 0px 20px;
+
+}
+
+.speakinfo img {
+  max-width: 70%;
+  margin-left: 15%;
+  margin-top: 2em;
+}
+
+
